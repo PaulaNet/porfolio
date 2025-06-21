@@ -152,6 +152,9 @@ To target only specific children
 
 
 
+<div id="thank-you-popup" class="popup hidden">
+  <p>✅ Thank you for your message! I'll get back to you soon.</p>
+</div>
 
 
 
@@ -169,5 +172,25 @@ To target only specific children
       <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
     </div>
   </footer>
+
+
+
+
+
+  <script>
+  const form = document.querySelector('form');
+  const popup = document.getElementById('thank-you-popup');
+
+  form.addEventListener('submit', function (e) {
+    setTimeout(() => {
+      popup.classList.remove('hidden');
+      setTimeout(() => {
+        popup.classList.add('hidden');
+      }, 3000); // Hide after 3 seconds
+    }, 1000); // Delay to give time for Formspree submission
+  });
+</script>
+
+
 </body>
 </html>
