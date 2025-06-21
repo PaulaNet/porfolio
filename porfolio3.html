@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pauline | Frontend Developer</title>
+  <link rel="stylesheet" href="style3.css" />
+
+<style>
+    .projects h2,
+    .about h2, .contact h2, .contact p{
+      text-align: center;
+    }
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #0077cc;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+
+
+
+
+  </style>
+
+
+<!--
+In your code, the selectors .projects h2 and .about h2 are descendant selectors (also known as combinators), not just class selectors.
+
+🔍 Breakdown:
+.projects h2
+.projects is a class selector (matches any element with class="projects").
+
+h2 is a type selector (matches any <h2> element).
+
+Together, .projects h2 means:
+
+“Select any <h2> element that is inside an element with the class projects.”
+
+.about h2
+Same logic:
+
+“Select any <h2> element that is inside an element with the class about.”
+
+    These are descendant selectors using:
+
+A class selector (.projects, .about)
+
+Combined with a type selector (h2)
+
+To target only specific children
+
+
+
+
+-->
+
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <nav>
+      <h1 class="logo">Pauline</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h2>Hi, I'm Pauline</h2>
+    <p>Frontend Developer & Web Designer</p>
+    <a href="#projects" class="btn">View Projects</a>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="screenshot1.jpg" alt="Project Screenshot" />
+        <h3>Restaurant Website</h3>
+        <p>Responsive website for a fictional restaurant.</p>
+        <a href="#" class="btn">Live Demo</a>
+        <a href="#" class="btn">GitHub</a>
+      </div>
+      <!-- Add more project cards as needed -->
+    </div>
+  </section>
+<!-- About Section -->
+  <section id="about" class="about">
+     <h2 >About Me</h2> 
+    <p>I’m a beginner frontend developer with skills in HTML, CSS, GitHub, and responsive design. I’ve completed the Meta HTML & CSS certification, and I enjoy building clean websites.</p>
+    <ul class="skills">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>Git & GitHub</li>
+      <li>Responsive Design</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2 class="contact">Contact Me</h2>
+    <p >Email me at <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <!-- You can add a form here if needed -->
+
+
+
+
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/mwpbnnwr" method="POST">
+<input type="hidden" name="site" value="Portfolio Site A">
+
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  
+</form>
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Pauline. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://github.com/yourgithub">GitHub</a>
+      <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+    </div>
+  </footer>
+</body>
+</html>
